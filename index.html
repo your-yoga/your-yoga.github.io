@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Yoga Hamburg — Achtsames Yoga in Borstel</title>
+    <meta name="description" content="Authentisches Yoga in Hamburg-Borstel. Kleine Klassen (max. 8 Personen), wohltuende Infrarotwärme (27–30°C), Krankenkassenkurse und Workshops. Jetzt Probestunde buchen!">
+    <!-- Tailwind CSS via CDN for zero-boilerplate setup -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        yogaBeige: '#FDFBF7',
+                        yogaStone: '#F4F1EA',
+                        yogaDark: '#2C302E',
+                        yogaAccent: '#C9A07E'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth fade-in for the Eversports widget container */
+        iframe { border: none; width: 100%; height: 750px; }
+    </style>
+</head>
+<body class="bg-yogaBeige text-yogaDark font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-yogaBeige/90 backdrop-blur-md border-b border-yogaStone">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-semibold tracking-wide text-yogaDark">YOUR YOGA</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide">
+                <a href="#studio" class="hover:text-yogaAccent transition">Das Studio</a>
+                <a href="#stundenplan" class="hover:text-yogaAccent transition">Stundenplan & Preise</a>
+                <a href="#kurse" class="hover:text-yogaAccent transition">Präventionskurse</a>
+                <a href="#anfahrt" class="hover:text-yogaAccent transition">Anfahrt & Kontakt</a>
+            </div>
+            <a href="#stundenplan" class="bg-yogaDark text-white px-4 py-2 rounded-md text-xs font-semibold tracking-wider uppercase hover:bg-yogaAccent transition">Jetzt Buchen</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-5xl mx-auto px-4 py-16 md:py-24 text-center">
+        <span class="text-xs font-semibold tracking-widest text-yogaAccent uppercase block mb-3">Willkommen in Hamburg-Borstel</span>
+        <h1 class="text-4xl md:text-6xl font-light tracking-tight text-yogaDark max-w-3xl mx-auto leading-tight mb-6">
+            Raum für Klarheit, Kraft und innere Ruhe.
+        </h1>
+        <p class="text-base md:text-lg text-yogaDark/70 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Persönliche Betreuung statt anonymer Massenstudios. Entdecke Bikram, Hatha und Yin Yoga in einer geschützten Atmosphäre, die sich nach dir richtet.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#stundenplan" class="bg-yogaDark text-white px-8 py-4 rounded-md font-medium shadow-sm hover:bg-yogaAccent transition text-center">
+                Probestunde buchen (12€)
+            </a>
+            <a href="#kurse" class="border border-yogaDark/20 text-yogaDark px-8 py-4 rounded-md font-medium hover:bg-yogaStone transition text-center">
+                Krankenkassen-Zuschuss prüfen
+            </a>
+        </div>
+    </header>
+
+    <!-- The Studio / Concepts -->
+    <section id="studio" class="bg-yogaStone py-16 md:py-24">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs font-semibold tracking-widest text-yogaAccent uppercase block mb-3">Unser Konzept</span>
+                    <h2 class="text-3xl font-light tracking-tight mb-6 text-yogaDark">Kleine Klassen. Echte Aufmerksamkeit.</h2>
+                    <p class="text-yogaDark/80 leading-relaxed mb-6">
+                        Bei uns trainierst du in einer festen, gemütlichen Gemeinschaft von <strong>maximal 8 Teilnehmern</strong> pro Klasse. So können wir präzise auf deine Ausrichtung eingehen und dich optimal unterstützen.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="mt-1 mr-3 text-yogaAccent">✓</div>
+                            <div>
+                                <h4 class="font-medium text-yogaDark">Wohltuende Infrarotwärme</h4>
+                                <p class="text-sm text-yogaDark/70">Ausgewählte Klassen (wie Bikram Yoga) finden bei angenehmen 27–30°C statt, was deine Muskeln schont und die Entgiftung fördert.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="mt-1 mr-3 text-yogaAccent">✓</div>
+                            <div>
+                                <h4 class="font-medium text-yogaDark">Vielseitige Stile</h4>
+                                <p class="text-sm text-yogaDark/70">Von kraftvollem Power Flow über therapeutisches Hatha und Forrest Yoga bis hin zu tiefenentspannendem Yin Yoga und Pilates.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-yogaBeige p-8 rounded-xl border border-yogaStone shadow-sm">
+                    <h3 class="text-xl font-medium mb-4">Gut zu wissen für deinen ersten Besuch:</h3>
+                    <ul class="space-y-3 text-sm text-yogaDark/80">
+                        <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-yogaAccent mr-3"></span> Bitte bring deine eigene Matte, ein großes Handtuch und Wasser mit.</li>
+                        <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-yogaAccent mr-3"></span> Sei am besten 10-15 Minuten vor Klassenbeginn im Studio.</li>
+                        <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-yogaAccent mr-3"></span> Buche deinen Platz bis spätestens 1 Stunde vor Start online.</li>
+                        <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-yogaAccent mr-3"></span> Kostenlose Stornierungen sind bis 24 Stunden vorab möglich.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eversports Booking Widget -->
+    <section id="stundenplan" class="py-16 md:py-24 max-w-5xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="text-xs font-semibold tracking-widest text-yogaAccent uppercase block mb-3">Live-Stundenplan</span>
+            <h2 class="text-3xl font-light tracking-tight text-yogaDark mb-4">Wähle deine Klasse & buche direkt online</h2>
+            <p class="text-sm text-yogaDark/60 max-w-xl mx-auto">
+                Nutze ganz einfach unser integriertes Eversports-Widget. Wähle deinen Wunschtermin, melde dich an und sichere dir deinen Platz.
+            </p>
+        </div>
+        
+        <!-- Live Eversports Widget Container -->
+        <div class="bg-white rounded-xl border border-yogaStone shadow-sm overflow-hidden p-2">
+            <iframe src="https://www.eversports.de/org/widget/overview?companyId=07d87e4d-d2b0-41ee-b8dc-b1bd3d030ada" title="Eversports Booking Widget"></iframe>
+        </div>
+    </section>
+
+    <!-- Health Insurance / Specials -->
+    <section id="kurse" class="bg-yogaStone py-16 md:py-24">
+        <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+            <div class="bg-yogaBeige p-8 rounded-xl border border-yogaStone shadow-sm flex flex-col justify-between">
+                <div>
+                    <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded font-medium mb-4">Zertifizierter Präventionskurs</span>
+                    <h3 class="text-2xl font-light mb-4">Gentle Yoga zur Stressreduktion</h3>
+                    <p class="text-sm text-yogaDark/70 mb-6 leading-relaxed">
+                        Dieser Hatha-Yoga-Kurs ist von den gesetzlichen Krankenkassen anerkannt. Bei einer Teilnahme von mindestens 80% erstatten die Kassen bis zu 80% der Kursgebühren zurück.
+                    </p>
+                    <table class="w-full text-sm text-yogaDark/85 border-collapse mb-6">
+                        <tr class="border-b border-yogaStone"><td class="py-2 font-medium">Nächster Start:</td><td class="py-2 text-right">Dienstag, 26. August 2026</td></tr>
+                        <tr class="border-b border-yogaStone"><td class="py-2 font-medium">Uhrzeit:</td><td class="py-2 text-right">18:30 – 20:00 Uhr</td></tr>
+                        <tr class="border-b border-yogaStone"><td class="py-2 font-medium">Umfang:</td><td class="py-2 text-right">8 Termine (bis 14. Okt 2026)</td></tr>
+                    </table>
+                </div>
+                <a href="#stundenplan" class="block text-center bg-yogaDark text-white px-6 py-3 rounded-md text-sm font-medium hover:bg-yogaAccent transition">Über Eversports anmelden</a>
+            </div>
+
+            <div class="bg-yogaBeige p-8 rounded-xl border border-yogaStone shadow-sm flex flex-col justify-between">
+                <div>
+                    <span class="inline-block bg-yogaStone text-yogaDark text-xs px-2.5 py-1 rounded font-medium mb-4">Spezial-Workshop</span>
+                    <h3 class="text-2xl font-light mb-4">Stillness Yoga - Touch of Presence</h3>
+                    <p class="text-sm text-yogaDark/70 mb-6 leading-relaxed">
+                        Eine tiefe, regenerative Kombination aus Yin und Restorative Yoga, untermalt mit sanften, achtsamen Hands-on-Assists (Hilfestellungen), um tiefsitzende Spannungen im Körper vollkommen loszulassen.
+                    </p>
+                    <table class="w-full text-sm text-yogaDark/85 border-collapse mb-6">
+                        <tr class="border-b border-yogaStone"><td class="py-2 font-medium">Termin:</td><td class="py-2 text-right">Sonntag, 5. Juli 2026</td></tr>
+                        <tr class="border-b border-yogaStone"><td class="py-2 font-medium">Uhrzeit:</td><td class="py-2 text-right">16:30 – 19:30 Uhr (3 Stunden)</td></tr>
+                        <tr class="border-b border-yogaStone"><td class="py-2 font-medium">Fokus:</td><td class="py-2 text-right">Tiefenentspannung & Faszien</td></tr>
+                    </table>
+                </div>
+                <a href="#stundenplan" class="block text-center border border-yogaDark text-yogaDark px-6 py-3 rounded-md text-sm font-medium hover:bg-yogaStone transition">Platz reservieren</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Directions -->
+    <section id="anfahrt" class="py-16 md:py-24 max-w-5xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-xs font-semibold tracking-widest text-yogaAccent uppercase block mb-3">Standort & Anreise</span>
+                <h2 class="text-3xl font-light tracking-tight text-yogaDark mb-6">So findest du uns in Borstel</h2>
+                
+                <div class="space-y-6 text-sm text-yogaDark/80">
+                    <div>
+                        <h4 class="font-semibold text-yogaDark mb-1">Adresse:</h4>
+                        <p>Borsteler Chaussee 17, Hamburg</p>
+                        <p class="text-xs text-yogaDark/60 mt-1">(Direkt gelegen zwischen dem REWE-Eingang und dem Getränkemarkt)</p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold text-yogaDark mb-1">Öffentliche Verkehrsmittel (HVV):</h4>
+                        <p class="mb-2"><strong>Option 1:</strong> U1 bis Station <strong>Lattenkamp</strong>, danach umsteigen in die Buslinie 114 oder 214.</p>
+                        <p><strong>Option 2:</strong> Buslinie 114 direkt bis zur Haltestelle <strong>Rosenbrook</strong> nehmen. Von dort sind es nur wenige Schritte zu Fuß.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map Placeholder or Leaflet/Google Embed -->
+            <div class="bg-yogaStone h-64 md:h-96 rounded-xl overflow-hidden flex flex-col items-center justify-center text-center p-6 border border-yogaStone">
+                <div class="text-3xl mb-2">📍</div>
+                <h4 class="font-medium mb-1">Borsteler Chaussee 17</h4>
+                <p class="text-xs text-yogaDark/50 max-w-xs mb-4">Hier kannst du später problemlos eine Google Maps iframe-Karte oder OpenStreetMap einbetten.</p>
+                <a href="https://maps.google.com/?q=Borsteler+Chaussee+17,+Hamburg" target="_blank" rel="noopener" class="bg-white text-xs font-medium px-4 py-2 rounded-md shadow-sm border border-yogaStone hover:bg-yogaBeige transition">In Google Maps öffnen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-yogaDark text-white/60 text-xs py-12 border-t border-yogaDark/90">
+        <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <p class="text-white font-medium mb-1">&copy; 2026 Your Yoga Hamburg.</p>
+                <p>Alle Rechte vorbehalten. Alle Angaben ohne Gewähr.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition">Impressum</a>
+                <a href="#" class="hover:text-white transition">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
