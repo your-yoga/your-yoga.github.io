@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rechtliches & Pflichtangaben — Your Yoga Hamburg</title>
     <meta name="robots" content="noindex, follow">
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,14 +23,13 @@
         }
     </script>
     <style>
-        /* Sanfter Hintergrund mit dem neuen optimierten Asset-Pfad */
-        .bg-legal-pattern {
-            background-image: linear-gradient(rgba(253, 248, 250, 0.94), rgba(253, 248, 250, 0.94)), url('https://your-yoga.github.io/hintergrund.jpg');
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
+        /* Replikation des originalen Hintergrund-Effekts */
+        body {
+          background-image: url('https://your-yoga.github.io/hintergrund.jpg');
+          background-repeat: repeat;
+          background-position: top center;
+          background-attachment: fixed;
         }
-        /* Styling für die Rechtstexte zur besseren Lesbarkeit */
         .legal-content h3 {
             color: #87105a;
             font-weight: 600;
@@ -45,9 +45,10 @@
         }
     </style>
 </head>
-<body class="bg-legal-pattern text-yogaTextDark font-sans antialiased">
+<body class="text-yogaTextDark font-sans antialiased">
 
-    <nav class="sticky top-0 z-50 bg-yogaBgLight/90 backdrop-blur-md border-b border-yogaRose/20">
+    <!-- Minimalist Header -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-yogaRose/20">
         <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
                 <img src="https://your-yoga.github.io/YY_big.png" alt="Your Yoga Logo" class="h-8 w-auto opacity-90">
@@ -60,11 +61,13 @@
         </div>
     </nav>
 
+    <!-- Main Content Layout -->
     <main class="max-w-5xl mx-auto px-4 py-12">
         <div class="grid md:grid-cols-4 gap-8">
             
+            <!-- Quick Navigation Sidebar -->
             <aside class="md:col-span-1">
-                <div class="sticky top-24 bg-white/60 backdrop-blur-sm p-4 rounded-xl border border-yogaRose/25 space-y-2 text-sm font-medium">
+                <div class="sticky top-24 bg-white/90 backdrop-blur-sm p-4 rounded-xl border border-yogaRose/25 space-y-2 text-sm font-medium shadow-sm">
                     <span class="text-xs font-bold text-yogaRose uppercase tracking-widest block mb-2 px-2">Dokumente</span>
                     <a href="#impressum" class="block px-2 py-1.5 rounded hover:bg-yogaBerry hover:text-white transition">Impressum</a>
                     <a href="#agb" class="block px-2 py-1.5 rounded hover:bg-yogaBerry hover:text-white transition">AGB</a>
@@ -73,8 +76,10 @@
                 </div>
             </aside>
 
-            <section class="md:col-span-3 bg-white/90 backdrop-blur-sm p-8 md:p-10 rounded-xl border border-yogaRose/20 shadow-sm space-y-16 legal-content">
+            <!-- Legal Texts Area -->
+            <section class="md:col-span-3 bg-white/95 backdrop-blur-sm p-8 md:p-10 rounded-xl border border-yogaRose/20 shadow-sm space-y-16 legal-content">
                 
+                <!-- 1. IMPRESSUM -->
                 <div id="impressum" class="scroll-mt-24">
                     <h2 class="text-2xl font-light text-yogaBerry border-b border-yogaRose/20 pb-2 mb-6">Impressum</h2>
                     <h3 class="!mt-0">Angaben gemäß § 5 TMG</h3>
@@ -108,6 +113,7 @@
                     <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
                 </div>
 
+                <!-- 2. AGB -->
                 <div id="agb" class="scroll-mt-24">
                     <h2 class="text-2xl font-light text-yogaBerry border-b border-yogaRose/20 pb-2 mb-6">Allgemeine Geschäftsbedingungen (AGB)</h2>
                     <h3 class="!mt-0">1. Allgemeines & Geltungsbereich</h3>
@@ -134,6 +140,7 @@
                     <p>Die Teilnahme erfolgt auf eigene Verantwortung. Die Teilnehmenden sind verpflichtet, bestehende gesundheitliche Einschränkungen, Verletzungen oder eine Schwangerschaft vor Kursbeginn der Lehrkraft mitzuteilen.</p>
                 </div>
 
+                <!-- 3. DATENSCHUTZ -->
                 <div id="datenschutz" class="scroll-mt-24">
                     <h2 class="text-2xl font-light text-yogaBerry border-b border-yogaRose/20 pb-2 mb-6">Datenschutzerklärung</h2>
                     <h3 class="!mt-0">1. Datenschutz auf einen Blick</h3>
@@ -158,6 +165,7 @@
                     <p>Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Zudem haben Sie das Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenden Sie sich hierzu formlos per E-Mail an uns.</p>
                 </div>
 
+                <!-- 4. NEWSLETTER -->
                 <div id="newsletter" class="scroll-mt-24">
                     <h2 class="text-2xl font-light text-yogaBerry border-b border-yogaRose/20 pb-2 mb-6">Newsletter-Informationen</h2>
                     <p>Wenn Sie den auf unserer Website angebotenen Newsletter beziehen möchten, benötigen wir von Ihnen eine gültige E-Mail-Adresse sowie Informationen, welche uns die Überprüfung gestatten, dass Sie der Inhaber der angegebenen Adresse und mit dem Empfang einverstanden sind.</p>
@@ -168,6 +176,7 @@
         </div>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-yogaBerry text-white/70 text-xs py-12 border-t border-yogaDarkBerry mt-12">
         <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
             <p>© 2026 Your Yoga Hamburg. Alle Rechtstexte auf dem aktuellen Stand.</p>
