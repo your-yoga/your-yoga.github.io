@@ -55,8 +55,8 @@
 
     <!-- Hero Section -->
     <header class="max-w-5xl mx-auto px-4 py-16 md:py-24 text-center">
-        <span class="text-xs font-semibold tracking-widest text-yogaRose uppercase block mb-3">Borsteler Chaussee 17</span>
-        <h1 class="text-4xl md:text-5xl font-light tracking-tight text-yogaBerry max-w-3xl mx-auto leading-tight mb-6">
+        <span class="text-xs font-semibold tracking-widest text-yogaTextDark uppercase block mb-3">Borsteler Chaussee 17</span>
+        <h1 class="text-4xl md:text-5xl font-light tracking-tight text-yogaDarkBerry max-w-3xl mx-auto leading-tight mb-6">
             Bikram Yoga Studio Hamburg
         </h1>
         <p class="text-base md:text-lg text-yogaTextDark/70 max-w-2xl mx-auto mb-10 leading-relaxed">
@@ -75,8 +75,7 @@
     <!-- Yoga Styles Section -->
     <section id="stile" class="py-12 max-w-5xl mx-auto px-4">
         <div class="text-center mb-12">
-            <span class="text-xs font-semibold tracking-widest text-yogaRose uppercase block mb-3">Unsere Praxis</span>
-            <h2 class="text-3xl font-light tracking-tight text-yogaBerry">Die drei Säulen bei Your Yoga</h2>
+            <h2 class="text-3xl font-light tracking-tight text-yogaTextDark">Yoga Stile</h2>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
@@ -138,17 +137,14 @@
     </section>
 
     <!-- Eversports Booking Widget -->
-    <section id="stundenplan" class="py-12 max-w-5xl mx-auto px-4">
+    <section id="stundenplan" class="py-12 max-w-7xl mx-auto px-4">
         <div class="text-center mb-8">
-            <span class="text-xs font-semibold tracking-widest text-yogaRose uppercase block mb-3">Live-Stundenplan</span>
-            <h2 class="text-3xl font-light tracking-tight text-yogaBerry mb-3">Wähle deine Klasse & buche direkt</h2>
-            <p class="text-sm text-yogaTextDark/70 max-w-xl mx-auto">
-                Nutze ganz einfach unser integriertes Eversports-Widget, um deine Probestunde oder reguläre Klassen zu reservieren.
-            </p>
+            <h2 class="text-3xl font-light tracking-tight text-yogaTextDark mb-3">Stundenplan</h2>
         </div>
         
         <!-- Live Eversports Widget Container -->
-        <div class="bg-white rounded-xl border border-yogaRose/20 shadow-sm overflow-hidden p-2">
+        <!-- Auf max-w-6xl oder 7xl erhöht, um die 65rem-Schwelle für die Wochenansicht zu knacken -->
+        <div class="max-w-6xl mx-auto bg-white rounded-xl border border-yogaRose/20 shadow-sm overflow-hidden p-2">
             <iframe src="https://www.eversports.de/org/widget/overview?companyId=07d87e4d-d2b0-41ee-b8dc-b1bd3d030ada" title="Eversports Booking Widget"></iframe>
         </div>
     </section>
@@ -156,8 +152,7 @@
     <!-- Workshops & Kurse -->
     <section id="kurse" class="py-12 max-w-5xl mx-auto px-4">
         <div class="text-center mb-12">
-            <span class="text-xs font-semibold tracking-widest text-yogaRose uppercase block mb-3">Besondere Angebote</span>
-            <h2 class="text-3xl font-light tracking-tight text-yogaBerry">Aktuelle Kurse & Workshops</h2>
+            <h2 class="text-3xl font-light tracking-tight text-yogaTextDark">Aktuelle Kurse & Workshops</h2>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
@@ -219,13 +214,37 @@
                 </div>
             </div>
             
-            <!-- Map Card -->
-            <div class="bg-white/90 backdrop-blur-sm h-64 md:h-80 rounded-xl overflow-hidden flex flex-col items-center justify-center text-center p-6 border border-yogaRose/20 shadow-sm">
-                <div class="text-3xl mb-2">📍</div>
-                <h4 class="font-medium text-yogaBerry mb-1">Borsteler Chaussee 17</h4>
-                <p class="text-xs text-yogaTextDark/60 max-w-xs mb-4">Günstig gelegen im Herzen von Hamburg-Borstel.</p>
-                <a href="https://maps.google.com/?q=Borsteler+Chaussee+17,+Hamburg" target="_blank" rel="noopener" class="bg-yogaBerry text-white text-xs font-medium px-4 py-2 rounded-md shadow-sm hover:bg-yogaDarkBerry transition">In Google Maps öffnen</a>
+            <!-- DSGVO-sichere Live-Karte (Zwei-Klick-Lösung) -->
+            <div id="map-container" class="bg-white/90 backdrop-blur-sm h-64 md:h-full rounded-xl overflow-hidden border border-yogaRose/20 shadow-sm flex flex-col items-center justify-center text-center p-6 relative">
+                <div class="relative z-10 max-w-sm">
+                    <div class="text-3xl mb-2">🗺️</div>
+                    <h4 class="font-semibold text-yogaBerry mb-1">Interaktive Karte laden</h4>
+                    <p class="text-xs text-yogaTextDark/70 mb-4">
+                        Mit dem Laden der Karte akzeptierst du die Datenschutzerklärung von Google.
+                    </p>
+                    <button onclick="loadLiveMap()" class="bg-yogaBerry text-white text-xs font-semibold px-4 py-2 rounded-md shadow-sm hover:bg-yogaDarkBerry transition">
+                        Karte aktivieren
+                    </button>
+                </div>
             </div>
+            
+            <script>
+            function loadLiveMap() {
+                const container = document.getElementById('map-container');
+                // Entfernt das Padding und zentrierten Text für die Vollbild-Karte
+                container.className = "bg-white/90 backdrop-blur-sm h-64 md:h-full rounded-xl overflow-hidden border border-yogaRose/20 shadow-sm";
+                container.innerHTML = `
+                    <iframe 
+                        class="w-full h-full grayscale opacity-85 hover:grayscale-0 transition duration-500"
+                        src="https://maps.google.com/maps?q=Bikram%20Yoga%20Studio%20Hamburg,Borsteler%20Chaussee%2017,%2022453%20Hamburg&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Your Yoga Standort Hamburg-Borstel">
+                    </iframe>
+                `;
+            }
+            </script>
         </div>
     </section>
 
